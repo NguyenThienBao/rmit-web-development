@@ -1,0 +1,26 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "First-app NodeJS for back-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenThienBao/rmit-web-development.git"
+  },
+  "keywords": [
+    "node",
+    "backend"
+  ],
+  "author": "ntbao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NguyenThienBao/rmit-web-development/issues"
+  },
+  "homepage": "https://github.com/NguyenThienBao/rmit-web-development#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
