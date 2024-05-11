@@ -4,10 +4,20 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
 
+// set static public
+app.use(express.static('public'));
+
 const port = 3000;
 
 app.get('/', (req, res) => {
     res.send("Hello world");
+})
+
+// Pre-Processing API
+
+app.all('/api', (req, res, next) => {
+    console.log(req.method + " - Request is recieved !");
+    next();
 })
 
 app.get('/api', (req, res) => {
