@@ -23,6 +23,7 @@
   "homepage": "https://github.com/NguyenThienBao/rmit-web-development#readme",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
     "express": "^4.19.2",
     "nodemon": "^3.1.0"
   }

@@ -9,6 +9,29 @@ app.use(express.static('public'));
 
 const port = 3000;
 
+// Define Middle ware with validate cookies
+const cookieParser = require('cookie-parser');
+const cookiesValidator = require('./cookiesValidator');
+
+const validateCookies = async (req, res, next) => {
+    console.log("Cookie - ", req.cookies);
+    try {
+        await cookiesValidator(req.cookies);
+        next();
+    } catch (err) {
+        next(err);
+    }
+}
+
+app.use(cookieParser());
+app.use(validateCookies);
+
+// Error Handler
+app.use((err, req, res, next) => {
+    console.error(err.message);
+    res.status(400).send(err.message);
+})
+
 app.get('/', (req, res) => {
     res.send("Hello world");
 })
