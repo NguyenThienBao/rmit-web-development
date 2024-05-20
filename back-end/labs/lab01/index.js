@@ -55,7 +55,7 @@ app.post('/api', (req, res) => {
 // Create API to access the data from data.json file
 
 // Step 1: Import data file
-var data = require('./data.json');
+var data = require('../../data.json');
 const e = require('express');
 
 // Setp 2 : Create API to access the all data
@@ -175,7 +175,7 @@ app.route('/book')
 })
 
 // Express Router
-const dogRouter = require('./pkg/dog');
+const dogRouter = require('../../pkg/dog');
 app.use('/dog', dogRouter);
 
 app.listen(port, () => {
